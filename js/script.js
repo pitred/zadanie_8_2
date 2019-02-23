@@ -1,5 +1,5 @@
 var CtoFBtn = document.getElementById('CtoF__button');
-var FtoCBtn = document.getElementById('FtoC__button')
+var FtoCBtn = document.getElementById('FtoC__button');
 var output = document.getElementById('output__div');
 var output2 = document.getElementById('output__info');
 var state;
@@ -22,7 +22,7 @@ CtoF__button.addEventListener('click', function () {
     if (!isNaN(tempC)) {
         var tempF = Math.round(tempC * 9 / 5 + 32);
         output.innerHTML = '<br> It is ' + tempF + ' &#176;' + 'F <br><br>';
-        output2.innerHTML = '<br>' + state + '<br>'
+        output2.innerHTML = '<br>' + state + '<br>';
     }
 });
 
@@ -42,6 +42,6 @@ FtoC__button.addEventListener('click', function () {
     if (!isNaN(tempF)) {
         var tempC = Math.round((tempF - 32) * 5 / 9);
         output.innerHTML = '<br> It is ' + tempC + ' &#176;' + 'C <br><br>';
-        output2.innerHTML = '<br>' + state + '<br>'
+        output2.innerHTML = '<br>' + state + '<br>';
     }
 });
