@@ -1,9 +1,10 @@
 'use strict';
-var output = document.getElementById('greeter-output');
-output.innerHTML = 'Click the button! I want to say hello!' + '<br><br>' + output.innerHTML;
-var button = document.getElementById('greeter-button');
+var temp;
+var output = document.getElementById('tempConvert-output__div');
+output.innerHTML = '<br> Click the button to convert temperature' + '<br><br>' + output.innerHTML;
+var button = document.getElementById('tempConvert__button');
 
-var userName;
+
 
 button.addEventListener('click', function () {
 
