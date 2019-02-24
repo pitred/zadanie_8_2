@@ -3,11 +3,17 @@ var FtoCBtn = document.getElementById('FtoC__button');
 var output = document.getElementById('output__div');
 var output2 = document.getElementById('output__info');
 var state;
+var tempC;
+var tempF;
+
 output.innerHTML = '<br> Click the button to convert temperature' + '<br><br>';
 
 CtoF__button.addEventListener('click', function () {
     var tempC = window.prompt("Enter temperature in C");
-    if (tempC === "" || tempC === isNaN || tempC === null) {
+    if (tempC === "" || tempC === null) {
+        output.innerHTML = ('');
+        output2.innerHTML = ('');
+    } else if (isNaN(tempC)) {
         output.innerHTML = ('<br> Incorrect value');
         output2.innerHTML = ('');
     } else if (tempC < 0) {
@@ -29,6 +35,9 @@ CtoF__button.addEventListener('click', function () {
 FtoC__button.addEventListener('click', function () {
     var tempF = window.prompt('Enter temperature in F');
     if (tempF === "" || tempF === isNaN || tempF === null) {
+        output.innerHTML = ('');
+        output2.innerHTML = ('');
+    } else if (isNaN(tempF)) {
         output.innerHTML = ('<br> Incorrect value');
         output2.innerHTML = ('');
     } else if (tempF < 32) {
